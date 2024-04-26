@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place video behind overlay elements */
+    filter: blur(5px);  /* Apply blur effect (adjust as desired) */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Place overlay elements on top of video */
+}
+
+.name {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;  /* White base color */
+    text-shadow: 
+        0 0 2px #0f0,  /* Teal inner glow */
+        0 0 5px #f00;  /* Red outer glow */
+}
+
+.greeting,
+.wishes {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #fff;
+    text-shadow: 
+        0 0 2px #0f0,  /* Teal inner glow */
+        0 0 5px #f00;  /* Red outer glow */
+}
+
+/* Optional Cyberpunk-style text effects (adjust properties as desired) */
+.name, .greeting, .wishes {
+    -webkit-text-stroke: 1px #0f0;  /* Teal text stroke */
+}
+
